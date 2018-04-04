@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  example1:
+    build: 
+      context: .
+    command: sh -l
+    cap_add:
+        - SYS_PTRACE
+
+ 
