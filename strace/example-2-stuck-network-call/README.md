@@ -5,7 +5,8 @@
 First, make sure that you have the latest version of Docker installed on your machine. [Get latest version](https://www.docker.com/products/overview#/install_the_platform)
 
 ## 2. Clone Repo
-1) Switch to example directory. cd `strace/example-2-stuck-network-call`.
+1) Clone this repo.
+2) Switch to example directory using  `cd strace/example-2-stuck-network-call`.
 
 ## 3. Running example
 
