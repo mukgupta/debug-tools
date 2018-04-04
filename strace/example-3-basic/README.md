@@ -10,7 +10,7 @@ First, make sure that you have the latest version of Docker installed on your ma
 
 ## 3. Running example
 
-1. Go inside the example3_basics container using `docker exec -it example3_basics bash`.
+1. Go inside the example3_basics container using `docker-compose run example3basic bash`.
 2. Run the following command to attach strace to hello world program.
 
 ```console
