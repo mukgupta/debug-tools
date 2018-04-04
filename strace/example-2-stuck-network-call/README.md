@@ -5,26 +5,15 @@
 First, make sure that you have the latest version of Docker installed on your machine. [Get latest version](https://www.docker.com/products/overview#/install_the_platform)
 
 ## 2. Clone Repo
-1) Switch to example directory. cd `strace/example-1-file-permissions`.
-2) Run `docker-compose run example1`
+1) Switch to example directory. cd `strace/example-2-stuck-network-call`.
 
-## 3. Running examples
+## 3. Running example
 
-1. File Not found
+1. Run `docker-compose up`.
+2. Go inside the example2_src container using `docker exec -it example2_src bash`.
+3. Run the following command to attach strace to all the processes named uswgi
 
 ```console
-$ python code/fileperms.py code/hell.txt
-$ strace -e trace=open,readv python code/fileperms.py code/hell.txt  2>&1 | tail
+$ ps aux | grep uwsgi | awk '{print"-p " $1}' | xargs strace -f -s 100
 ```
-
-2. File Protected
-```console
-$ python code/fileperms.py code/hello-protected.txt
-$ strace -e trace=open,readv python code/fileperms.py code/hello-protected.txt  2>&1 | tail
-```
-
-3. File Opens Successfully
-```console
-$ python code/fileperms.py code/hello.txt
-$ strace -e trace=open,readv python code/fileperms.py code/hello.txt  2>&1 | tail
-```
+4. On the host machine, run `curl localhost:5000` and observe the response of command in 3.
