@@ -11,7 +11,7 @@ First, make sure that you have the latest version of Docker installed on your ma
 ## 3. Running example
 
 1. Run `docker-compose up`.
-2. Go inside the example2_src container using `docker exec -it example2_src bash`.
+2. Go inside the example2_src container using `docker-compose run example2_src bash`.
 3. Run the following command to attach strace to all the processes named uswgi
 
 ```console
