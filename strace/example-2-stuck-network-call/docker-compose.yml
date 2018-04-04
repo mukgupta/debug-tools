@@ -14,6 +14,7 @@ services:
         - SYS_PTRACE
     links:
       - example2dest
+    container_name: example2_src
 
   example2dest:
     build: 
@@ -24,3 +25,4 @@ services:
       - ./code/dest:/app
     cap_add:
         - SYS_PTRACE
+    container_name: example2_dest
