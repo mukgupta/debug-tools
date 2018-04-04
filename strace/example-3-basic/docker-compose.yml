@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  example3basic:
+    build: 
+      context: .
+    volumes:
+      - ./code:/code
+    cap_add:
+        - SYS_PTRACE
+    container_name: example3_basics
