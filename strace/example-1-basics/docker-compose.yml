@@ -4,8 +4,8 @@ services:
   example1:
     build: 
       context: .
-    command: sh -l
+    volumes:
+      - ./code:/code
     cap_add:
         - SYS_PTRACE
-
- 
+    container_name: example1_basics

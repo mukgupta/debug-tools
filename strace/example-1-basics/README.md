@@ -6,11 +6,11 @@ First, make sure that you have the latest version of Docker installed on your ma
 
 ## 2. Clone Repo
 1) Clone this repo.
-2) Switch to example directory using  `cd strace/example-3-basic`.
+2) Switch to example directory using  `cd strace/example-1-basics`.
 
 ## 3. Running example
 
-1. Go inside the example3_basics container using `docker-compose run example3basic bash`.
+1. Go inside the example1 container using `docker-compose run example1 bash`.
 2. Run the following command to attach strace to hello world program.
 
 ```console
