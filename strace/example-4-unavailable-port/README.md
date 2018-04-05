@@ -17,7 +17,7 @@ First, make sure that you have the latest version of Docker installed on your ma
 
 ```console
 $ python server.py # This will exit without any error on the console.
-$ strace -e trace=open, close, bind -rs 100 server.py
+$ strace -e trace=open,close,bind -rs 100 python server.py
 ```
 
 
