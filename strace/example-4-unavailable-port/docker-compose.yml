@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  example4:
+    build: 
+      context: .
+    command: python server.py
+    cap_add:
+        - SYS_PTRACE
+    container_name: example4_port
