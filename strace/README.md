@@ -13,4 +13,4 @@ Please follow the links to go to each tutorial.
 
 [Example 5: File descriptors not available](example-5-file-descriptors/)
 
-[Example 6: Signal](example-6-signals/)
+[Example 6: Signals](example-6-signals/)

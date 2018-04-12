@@ -24,3 +24,10 @@ $ gcc -o hello hello.c
 $ ./hello # prints 'Hello World'
 
 ```
+
+2) SIGHUP, SIGINT etc
+```
+$ strace -f python -c 'import time;time.sleep(1000000)' # Runs a python process and sleeps for eternity
+$ ps -a | grep python | awk '{print $1}' | xargs kill -SIGHUP
+# Can try this after switching the user to ned and see if syscall shows the correct user id
+```
