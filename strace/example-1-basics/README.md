@@ -14,6 +14,11 @@ First, make sure that you have the latest version of Docker installed on your ma
 2. Run the following command to attach strace to hello world program.
 
 ```console
-$ strace -rs 100 ./hello
-$ strace -e trace=open,close,write -rs 100 ./hello
+$ gcc -o hello1 hello1.c
+$ strace -rs 100 ./hello1
+```
+
+```console
+$ gcc -o hello2 hello2.c
+$ strace -rs 100 ./hello2
 ```
