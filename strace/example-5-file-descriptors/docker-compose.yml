@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  example5:
+    build: 
+      context: .
+    cap_add:
+        - SYS_PTRACE
+        - SYS_RESOURCE
+    container_name: example5_fd
